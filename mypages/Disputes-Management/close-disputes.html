@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Purple Admin</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="../../assets/vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="../../assets/vendors/ti-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="../../assets/vendors/css/vendor.bundle.base.css">
+    <link rel="stylesheet" href="../../assets/vendors/font-awesome/css/font-awesome.min.css">
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <!-- endinject -->
+    <!-- Layout styles -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <!-- End layout styles -->
+    <link rel="shortcut icon" href="../../assets/images/favicon.png" />
+  </head>
+  <body>
+    <div class="container-scroller">
+      <!-- partial:../../partials/_navbar.html -->
+      <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+        <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-start">
+          <a class="navbar-brand brand-logo " href="index.html">
+           <!-- <img src="assets/images/logo.svg" alt="logo" /></a> -->
+            Eurasia
+          <a class="navbar-brand brand-logo-mini ps-3" href="index.html">
+           <!-- <img src="assets/images/logo-mini.svg" alt="logo" /> -->
+            Eurasia
+         </a>
+       </div>
+        <div class="navbar-menu-wrapper d-flex align-items-stretch">
+          <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+            <span class="mdi mdi-menu"></span>
+          </button>
+          <div class="search-field d-none d-md-block">
+            <form class="d-flex align-items-center h-100" action="#">
+              <div class="input-group">
+                <div class="input-group-prepend bg-transparent">
+                  <i class="input-group-text border-0 mdi mdi-magnify"></i>
+                </div>
+                <input type="text" class="form-control bg-transparent border-0" placeholder="Search projects">
+              </div>
+            </form>
+          </div>
+          <ul class="navbar-nav navbar-nav-right">
+            <li class="nav-item nav-profile dropdown">
+              <a class="nav-link dropdown-toggle" id="profileDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                <div class="nav-profile-img">
+                  <img src="../../assets/images/faces/face1.jpg" alt="image">
+                  <span class="availability-status online"></span>
+                </div>
+                <div class="nav-profile-text">
+                  <p class="mb-1 text-black">David Greymaax</p>
+                </div>
+              </a>
+              <div class="dropdown-menu navbar-dropdown" aria-labelledby="profileDropdown">
+                <a class="dropdown-item" href="#">
+                  <i class="mdi mdi-cached me-2 text-success"></i> Activity Log </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="/mypages/user/login.html">
+                  <i class="mdi mdi-logout me-2 text-primary"></i> Signout </a>
+              </div>
+            </li>
+            <li class="nav-item d-none d-lg-block full-screen-link">
+              <a class="nav-link">
+                <i class="mdi mdi-fullscreen" id="fullscreen-button"></i>
+              </a>
+            </li>
+          </ul>
+          <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+            <span class="mdi mdi-menu"></span>
+          </button>
+        </div>
+      </nav>
+      <!-- partial -->
+      <div class="container-fluid page-body-wrapper">
+        <!-- partial:../../partials/_sidebar.html -->
+        <nav class="sidebar sidebar-offcanvas" id="sidebar">
+          <ul class="nav">
+            <li class="nav-item nav-profile">
+              <a href="#" class="nav-link">
+                <div class="nav-profile-image">
+                  <img src="../../assets/images/faces/face1.jpg" alt="profile" />
+                  <span class="login-status online"></span>
+                  <!--change to offline or busy as needed-->
+                </div>
+                <div class="nav-profile-text d-flex flex-column">
+                  <span class="font-weight-bold mb-2">David Grey. H</span>
+                  <span class="text-secondary text-small">Project Manager</span>
+                </div>
+                <i class="mdi mdi-bookmark-check text-success nav-profile-badge"></i>
+              </a>
+            </li>
+       
+             <li class="nav-item">
+                <a class="nav-link" href="/index.html">
+                   <span class="menu-title">Dashboard</span>
+                   <i class="mdi mdi-view-dashboard menu-icon"></i>
+                </a>
+             </li>
+       
+             <!-- Client Management -->
+             <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="collapse" href="#clientMangement" aria-expanded="false" aria-controls="hotelManagement">
+                   <span class="menu-title">Client Management</span>
+                   <i class="menu-arrow"></i>
+                   <i class="mdi mdi-account-group menu-icon"></i>
+                </a>
+                <div class="collapse" id="clientMangement">
+                   <ul class="nav flex-column sub-menu">
+                      <li class="nav-item"><a class="nav-link" href="../Client-Management/clientList.html">Client List</a></li>
+                      <li class="nav-item"><a class="nav-link" href="../Client-Management/addList.html">Add Client</a></li>
+                   </ul>
+                </div>
+             </li>
+       
+             <!-- Client Request -->
+             <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="collapse" href="#clientRequest" aria-expanded="false" aria-controls="hotelExtranet">
+                   <span class="menu-title">Client Request</span>
+                   <i class="menu-arrow"></i>
+                   <i class="mdi mdi-account-clock menu-icon"></i>
+                </a>
+                <div class="collapse" id="clientRequest">
+                   <ul class="nav flex-column sub-menu">
+                      <li class="nav-item"><a class="nav-link" href="../Client-Request/all-request.html">All Request</a></li>
+                      <li class="nav-item"><a class="nav-link" href="../Client-Request/new-request.html">New Request</a></li>
+                   </ul>
+                </div>
+             </li>
+       
+             <!-- Employee Management -->
+             <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="collapse" href="#departure" aria-expanded="false" aria-controls="departure">
+                   <span class="menu-title">Employee Management</span>
+                   <i class="menu-arrow"></i>
+                   <i class="mdi mdi-account-tie menu-icon"></i>
+                </a>
+                <div class="collapse" id="departure">
+                   <ul class="nav flex-column sub-menu">
+                      <li class="nav-item"><a class="nav-link" href="../Employee-Management/add-employee.html">Add Employee</a></li>
+                      <li class="nav-item"><a class="nav-link" href="../Employee-Management/all-employee.html">All Employee</a></li>
+                   </ul>
+                </div>
+             </li>
+       
+             <!-- Manage Destination -->
+             <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="collapse" href="#destinationManagement" aria-expanded="false" aria-controls="flightManagement">
+                   <span class="menu-title">Manage Destination</span>
+                   <i class="menu-arrow"></i>
+                   <i class="mdi mdi-map-marker-multiple menu-icon"></i>
+                </a>
+                <div class="collapse" id="destinationManagement">
+                   <ul class="nav flex-column sub-menu">
+                      <li class="nav-item"><a class="nav-link" href="../Manage-Destination/country.html">Countries</a></li>
+                      <li class="nav-item"><a class="nav-link" href="../Manage-Destination/city.html">Cities</a></li>
+                   </ul>
+                </div>
+             </li>
+       
+             <!-- Disputes Management -->
+             <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="collapse" href="#disputes" aria-expanded="false" aria-controls="excursion">
+                   <span class="menu-title">Disputes Management</span>
+                   <i class="menu-arrow"></i>
+                   <i class="mdi mdi-alert-circle-outline menu-icon"></i>
+                </a>
+                <div class="collapse" id="disputes">
+                   <ul class="nav flex-column sub-menu">
+                      <li class="nav-item"><a class="nav-link" href="../Disputes-Management/openDisputes.html">Open Disputes</a></li>
+                      <li class="nav-item"><a class="nav-link" href="../Disputes-Management/close-disputes.html">Close Disputes</a></li>
+                   </ul>
+                </div>
+             </li>
+       
+             <!-- Settings -->
+             <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="collapse" href="#settings" aria-expanded="false" aria-controls="auth">
+                   <span class="menu-title">Settings</span>
+                   <i class="menu-arrow"></i>
+                   <i class="mdi mdi-cog-outline menu-icon"></i>
+                </a>
+                <div class="collapse" id="settings">
+                   <ul class="nav flex-column sub-menu">
+                      <li class="nav-item"><a class="nav-link" href="../website-settings/website-setting.html">Website Setting</a></li>
+                   </ul>
+                </div>
+             </li>
+       
+             <!-- Logout -->
+             <li class="nav-item">
+              <a class="nav-link" href="../user/login.html">
+                 <span class="menu-title">Logout</span>
+                 <i class="mdi mdi-logout menu-icon"></i>
+              </a>
+           </li>
+          </ul>
+       </nav>
+        <!-- partial -->
+       <!-- partial -->
+       <div class="main-panel">
+        <div class="content-wrapper">
+          <div class="page-content">
+            <div class="card">
+              <div class="card-body">
+          
+                <h4 class="card-title mb-4">
+                  <i class="mdi mdi-check-circle-outline text-success"></i> Closed Disputes
+                </h4>
+          
+                <!-- Search & Filter -->
+                <form class="row mb-3 g-2">
+                  <div class="col-md-4">
+                    <input type="text" class="form-control" placeholder="Search by Booking ID or Customer Name">
+                  </div>
+                  <div class="col-md-3">
+                    <select class="form-select h-100">
+                      <option value="">All Reasons</option>
+                      <option value="Hotel Issue">Hotel Issue</option>
+                      <option value="Cab Delay">Cab Delay</option>
+                      <option value="Payment">Payment</option>
+                    </select>
+                  </div>
+                  <div class="col-md-2">
+                    <button type="submit" class="btn btn-primary w-100">
+                      <i class="mdi mdi-magnify"></i> Search
+                    </button>
+                  </div>
+                </form>
+          
+                <!-- Closed Disputes Table -->
+                <div class="table-responsive">
+                  <table class="table table-bordered align-middle text-center">
+                    <thead class="table-light">
+                      <tr>
+                        <th>#</th>
+                        <th>Booking ID</th>
+                        <th>Customer</th>
+                        <th>Reason</th>
+                        <th>Closed On</th>
+                        <th>Resolution</th>
+                        <th>Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>#BK2024101</td>
+                        <td>Simran Kaur</td>
+                        <td>Cab didn't arrive</td>
+                        <td>2025-04-10</td>
+                        <td>Full refund issued</td>
+                        <td>
+                          <button class="btn btn-sm btn-secondary" data-bs-toggle="modal" data-bs-target="#viewClosedDisputeModal">
+                            <i class="mdi mdi-eye"></i> View
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>#BK2024102</td>
+                        <td>Ravi Verma</td>
+                        <td>Hotel downgrade</td>
+                        <td>2025-04-08</td>
+                        <td>50% refund</td>
+                        <td>
+                          <button class="btn btn-sm btn-secondary" data-bs-toggle="modal" data-bs-target="#viewClosedDisputeModal">
+                            <i class="mdi mdi-eye"></i> View
+                          </button>
+                        </td>
+                      </tr>
+                      <!-- More rows as needed -->
+                    </tbody>
+                  </table>
+                </div>
+          
+              </div>
+            </div>
+          </div>
+          
+          <!-- View Closed Dispute Modal -->
+          <div class="modal fade" id="viewClosedDisputeModal" tabindex="-1" aria-labelledby="viewClosedDisputeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+              <div class="modal-content">
+                
+                <div class="modal-header">
+                  <h5 class="modal-title" id="viewClosedDisputeModalLabel">
+                    <i class="mdi mdi-check-circle-outline text-success"></i> Closed Dispute Details
+                  </h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+          
+                <div class="modal-body">
+                  <h6><strong>Booking ID:</strong> #BK2024101</h6>
+                  <p><strong>Customer:</strong> Simran Kaur</p>
+                  <p><strong>Closed On:</strong> 2025-04-10</p>
+                  <p><strong>Reason:</strong> Cab didn’t arrive at pickup point</p>
+                  <p><strong>Admin Resolution:</strong> Full refund of ₹2500 processed to customer's account within 3 days.</p>
+                  <p><strong>Additional Notes:</strong> Apology email sent, offered 10% discount for next trip.</p>
+                </div>
+          
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+                </div>
+          
+              </div>
+            </div>
+          </div>
+          
+       
+          
+              
+        </div>
+        <!-- content-wrapper ends -->
+        <!-- partial:partials/_footer.html -->
+    
+        <!-- partial -->
+    </div>
+    <!-- main-panel ends -->
+</div>
+      </div>
+      <!-- page-body-wrapper ends -->
+    </div>
+    <!-- container-scroller -->
+    <!-- plugins:js -->
+    <script src="../../assets/vendors/js/vendor.bundle.base.js"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page -->
+    <!-- End plugin js for this page -->
+    <!-- inject:js -->
+    <script src="../../assets/js/off-canvas.js"></script>
+    <script src="../../assets/js/misc.js"></script>
+    <script src="../../assets/js/settings.js"></script>
+    <script src="../../assets/js/todolist.js"></script>
+    <script src="../../assets/js/jquery.cookie.js"></script>
+    <!-- endinject -->
+    <!-- Custom js for this page -->
+    <!-- End custom js for this page -->
+  </body>
+</html>

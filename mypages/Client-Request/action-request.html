@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <title>Purple Admin</title>
+      <!-- plugins:css -->
+      <link rel="stylesheet" href="../../assets/vendors/mdi/css/materialdesignicons.min.css">
+      <link rel="stylesheet" href="../../assets/vendors/ti-icons/css/themify-icons.css">
+      <link rel="stylesheet" href="../../assets/vendors/css/vendor.bundle.base.css">
+      <link rel="stylesheet" href="../../assets/vendors/font-awesome/css/font-awesome.min.css">
+      <!-- endinject -->
+      <!-- Plugin css for this page -->
+      <!-- End plugin css for this page -->
+      <!-- inject:css -->
+      <!-- endinject -->
+      <!-- Layout styles -->
+      <link rel="stylesheet" href="../../assets/css/style.css">
+      <!-- End layout styles -->
+      <link rel="shortcut icon" href="../../assets/images/favicon.png" />
+      <style>
+         .form-section {
+         background: #fff;
+         border-radius: 8px;
+         box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+         padding: 30px;
+         }
+         label.required::after {
+         content: " *";
+         color: red;
+         }
+      </style>
+   </head>
+   <body>
+      <div class="container-scroller">
+         <!-- partial:../../partials/_navbar.html -->
+         <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+            <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-start">
+               <a class="navbar-brand brand-logo " href="index.html">
+                  <!-- <img src="assets/images/logo.svg" alt="logo" /></a> -->
+                  Eurasia
+               <a class="navbar-brand brand-logo-mini ps-3" href="index.html">
+                  <!-- <img src="assets/images/logo-mini.svg" alt="logo" /> -->
+                  Eurasia
+               </a>
+            </div>
+            <div class="navbar-menu-wrapper d-flex align-items-stretch">
+               <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+               <span class="mdi mdi-menu"></span>
+               </button>
+               <ul class="navbar-nav navbar-nav-right">
+                  <li class="nav-item nav-profile dropdown">
+                    <a class="nav-link dropdown-toggle" id="profileDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                      <div class="nav-profile-img">
+                        <img src="../../assets/images/faces/face1.jpg" alt="image">
+                        <span class="availability-status online"></span>
+                      </div>
+                      <div class="nav-profile-text">
+                        <p class="mb-1 text-black">David Greymaax</p>
+                      </div>
+                    </a>
+                    <div class="dropdown-menu navbar-dropdown" aria-labelledby="profileDropdown">
+                      <a class="dropdown-item" href="#">
+                        <i class="mdi mdi-cached me-2 text-success"></i> Activity Log </a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="/mypages/user/login.html">
+                        <i class="mdi mdi-logout me-2 text-primary"></i> Signout </a>
+                    </div>
+                  </li>
+                  <li class="nav-item d-none d-lg-block full-screen-link">
+                    <a class="nav-link">
+                      <i class="mdi mdi-fullscreen" id="fullscreen-button"></i>
+                    </a>
+                  </li>
+                </ul>
+               <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+               <span class="mdi mdi-menu"></span>
+               </button>
+            </div>
+         </nav>
+         <!-- partial -->
+         <div class="container-fluid page-body-wrapper">
+            <!-- partial:../../partials/_sidebar.html -->
+            <nav class="sidebar sidebar-offcanvas" id="sidebar">
+               <ul class="nav">
+                  <li class="nav-item nav-profile">
+                     <a href="#" class="nav-link">
+                        <div class="nav-profile-image">
+                           <img src="../../assets/images/faces/face1.jpg" alt="profile" />
+                           <span class="login-status online"></span>
+                           <!--change to offline or busy as needed-->
+                        </div>
+                        <div class="nav-profile-text d-flex flex-column">
+                           <span class="font-weight-bold mb-2">David Grey. H</span>
+                           <span class="text-secondary text-small">Project Manager</span>
+                        </div>
+                        <i class="mdi mdi-bookmark-check text-success nav-profile-badge"></i>
+                     </a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="/index.html">
+                     <span class="menu-title">Dashboard</span>
+                     <i class="mdi mdi-view-dashboard menu-icon"></i>
+                     </a>
+                  </li>
+                  <!-- Client Management -->
+                  <li class="nav-item">
+                     <a class="nav-link" data-bs-toggle="collapse" href="#clientMangement" aria-expanded="false" aria-controls="hotelManagement">
+                     <span class="menu-title">Client Management</span>
+                     <i class="menu-arrow"></i>
+                     <i class="mdi mdi-account-group menu-icon"></i>
+                     </a>
+                     <div class="collapse" id="clientMangement">
+                        <ul class="nav flex-column sub-menu">
+                           <li class="nav-item"><a class="nav-link" href="../Client-Management/clientList.html">Client List</a></li>
+                           <li class="nav-item"><a class="nav-link" href="../Client-Management/addList.html">Add Client</a></li>
+                        </ul>
+                     </div>
+                  </li>
+                  <!-- Client Request -->
+                  <li class="nav-item">
+                     <a class="nav-link" data-bs-toggle="collapse" href="#clientRequest" aria-expanded="false" aria-controls="hotelExtranet">
+                     <span class="menu-title">Client Request</span>
+                     <i class="menu-arrow"></i>
+                     <i class="mdi mdi-account-clock menu-icon"></i>
+                     </a>
+                     <div class="collapse" id="clientRequest">
+                        <ul class="nav flex-column sub-menu">
+                           <li class="nav-item"><a class="nav-link" href="../Client-Request/all-request.html">All Request</a></li>
+                           <li class="nav-item"><a class="nav-link" href="../Client-Request/new-request.html">New Request</a></li>
+                        </ul>
+                     </div>
+                  </li>
+                  <!-- Employee Management -->
+                  <li class="nav-item">
+                     <a class="nav-link" data-bs-toggle="collapse" href="#departure" aria-expanded="false" aria-controls="departure">
+                     <span class="menu-title">Employee Management</span>
+                     <i class="menu-arrow"></i>
+                     <i class="mdi mdi-account-tie menu-icon"></i>
+                     </a>
+                     <div class="collapse" id="departure">
+                        <ul class="nav flex-column sub-menu">
+                           <li class="nav-item"><a class="nav-link" href="../Employee-Management/add-employee.html">Add Employee</a></li>
+                           <li class="nav-item"><a class="nav-link" href="../Employee-Management/all-employee.html">All Employee</a></li>
+                        </ul>
+                     </div>
+                  </li>
+                  <!-- Manage Destination -->
+                  <li class="nav-item">
+                     <a class="nav-link" data-bs-toggle="collapse" href="#destinationManagement" aria-expanded="false" aria-controls="flightManagement">
+                     <span class="menu-title">Manage Destination</span>
+                     <i class="menu-arrow"></i>
+                     <i class="mdi mdi-map-marker-multiple menu-icon"></i>
+                     </a>
+                     <div class="collapse" id="destinationManagement">
+                        <ul class="nav flex-column sub-menu">
+                           <li class="nav-item"><a class="nav-link" href="../Manage-Destination/country.html">Countries</a></li>
+                           <li class="nav-item"><a class="nav-link" href="../Manage-Destination/city.html">Cities</a></li>
+                        </ul>
+                     </div>
+                  </li>
+                  <!-- Disputes Management -->
+                  <li class="nav-item">
+                     <a class="nav-link" data-bs-toggle="collapse" href="#disputes" aria-expanded="false" aria-controls="excursion">
+                     <span class="menu-title">Disputes Management</span>
+                     <i class="menu-arrow"></i>
+                     <i class="mdi mdi-alert-circle-outline menu-icon"></i>
+                     </a>
+                     <div class="collapse" id="disputes">
+                        <ul class="nav flex-column sub-menu">
+                           <li class="nav-item"><a class="nav-link" href="../Disputes-Management/openDisputes.html">Open Disputes</a></li>
+                           <li class="nav-item"><a class="nav-link" href="../Disputes-Management/close-disputes.html">Close Disputes</a></li>
+                        </ul>
+                     </div>
+                  </li>
+                  <!-- Settings -->
+                  <li class="nav-item">
+                     <a class="nav-link" data-bs-toggle="collapse" href="#settings" aria-expanded="false" aria-controls="auth">
+                     <span class="menu-title">Settings</span>
+                     <i class="menu-arrow"></i>
+                     <i class="mdi mdi-cog-outline menu-icon"></i>
+                     </a>
+                     <div class="collapse" id="settings">
+                        <ul class="nav flex-column sub-menu">
+                           <li class="nav-item"><a class="nav-link" href="../website-settings/website-setting.html">Website Setting</a></li>
+                        </ul>
+                     </div>
+                  </li>
+                  <!-- Logout -->
+                  <li class="nav-item">
+                     <a class="nav-link" href="../user/login.html">
+                     <span class="menu-title">Logout</span>
+                     <i class="mdi mdi-logout menu-icon"></i>
+                     </a>
+                  </li>
+               </ul>
+            </nav>
+            <!-- partial -->
+            <!-- partial -->
+            <div class="main-panel">
+               <div class="content-wrapper">
+                  <div class="d-flex justify-content-between">
+                     <h3 class="page-title">Add Contact</h3>
+                     <nav aria-label="breadcrumb">
+                       <ol class="breadcrumb">
+                         <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+                         <li class="breadcrumb-item active">All Contacts</li>
+                       </ol>
+                     </nav>
+                   </div>
+                     <div class="row">
+                        <div class="col-12 d-flex">
+                           <!-- Button to trigger modal -->
+                           <button class="btn btn-gradient-primary btn-rounded btn-fw mb-3" data-bs-toggle="modal" data-bs-target="#addContactModal">
+                           Add Contact
+                           </button>
+                        </div>
+                     </div>
+                     <div class="row">
+                        <div class="col-12 grid-margin">
+                           <div class="card">
+                              <div class="card-body">
+                                 <h4 class="card-title">Contact List</h4>
+                                 <div class="table-responsive">
+                                    <table class="table">
+                                       <thead>
+                                          <tr>
+                                             <th> Name  </th>
+                                             <th> Phone No </th>
+                                             <th> Address </th>
+                                             <th> Pick-up City </th>
+                                             <th>  </th>
+                                             <th> Action </th>
+                                          </tr>
+                                       </thead>
+                                       <tbody>
+                                          <tr>
+                                             <td>Suraj Yadav</td>
+                                             <td> 9650927465 </td>
+                                             <td>vinay nagar faridabad</td>
+                                             <td> faridabad </td>
+                                             <td> 
+                                                <i class="mdi mdi-airplane"></i>
+                                                <i class="mdi mdi-silverware-fork-knife"></i>
+                                                <i class="mdi mdi-car"></i>
+                                             </td>
+                                             <td>
+                                                <div class="btn-group">
+                                                   <button type="button" class="btn btn-gradient-success" data-bs-toggle="dropdown" aria-expanded="false" style="padding: 6px 10px;">
+                                                   &#8942;
+                                                   </button>
+                                                   <div class="dropdown-menu dropdown-menu-end navbar-dropdown preview-list" aria-labelledby="notificationDropdown" data-bs-popper="static">
+                                                      <a class="dropdown-item preview-item btn" data-bs-toggle="modal" data-bs-target="#uploadFlightTicketModal">
+                                                         <div class="preview-thumbnail">
+                                                            <div class="preview-icon bg-success">
+                                                               <i class=""> ✈ </i>
+                                                            </div>
+                                                         </div>
+                                                         <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
+                                                            <h6 class="preview-subject font-weight-normal mb-1">Upload Flight Tickets</h6>
+                                                            <p class="text-gray ellipsis mb-0"> Dummy </p>
+                                                         </div>
+                                                      </a>
+                                                      <div class="dropdown-divider"></div>
+
+                                                      <a class="dropdown-item preview-item btn" data-bs-toggle="modal" data-bs-target="#taxiDetailsModal">
+                                                         <div class="preview-thumbnail">
+                                                            <div class="preview-icon bg-warning">
+                                                               <i class="">🚕</i>
+                                                            </div>
+                                                         </div>
+                                                         <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
+                                                            <h6 class="preview-subject font-weight-normal mb-1">Taxi Details</h6>
+                                                            <p class="text-gray ellipsis mb-0"> Dummy </p>
+                                                         </div>
+                                                      </a>
+                                                      <div class="dropdown-divider"></div>
+                                                      
+                                                      <a class="dropdown-item preview-item btn" data-bs-toggle="modal" data-bs-target="#mealAccommodationModal">
+                                                         <div class="preview-thumbnail">
+                                                            <div class="preview-icon bg-info">
+                                                               <i class="">🏨</i>
+                                                            </div>
+                                                         </div>
+                                                         <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
+                                                            <h6 class="preview-subject font-weight-normal mb-1">Meal And Accomodation</h6>
+                                                            <p class="text-gray ellipsis mb-0"> Dummy </p>
+                                                         </div>
+                                                      </a>
+                                                   </div>
+                                                </div>
+                                 </div>
+                              </div>
+                              </td>
+                              </tr>
+                              <tr>
+                              <td>Suraj Yadav</td>
+                              <td> 9650927465 </td>
+                              <td>vinay nagar faridabad</td>
+                              <td> faridabad </td>
+  <td> 
+                                                <i class="mdi mdi-airplane"></i>
+                                                <i class="mdi mdi-silverware-fork-knife"></i>
+                                                <i class="mdi mdi-car"></i>
+                                             </td>                              <td><div class="btn-group">
+                              <button type="button" class="btn btn-gradient-success " data-bs-toggle="dropdown" aria-expanded="false" style="padding: 6px 10px;">
+                              &#8942;
+                              </button>
+                              <div class="dropdown-menu dropdown-menu-end navbar-dropdown preview-list" aria-labelledby="notificationDropdown" data-bs-popper="static">
+                              <a class="dropdown-item preview-item">
+                              <div class="preview-thumbnail">
+                              <div class="preview-icon bg-success">
+                              <i class=""> ✈ </i>
+                              </div>
+                              </div>
+                              <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
+                              <h6 class="preview-subject font-weight-normal mb-1">Upload Flight Tickets</h6>
+                              <p class="text-gray ellipsis mb-0"> Dummy </p>
+                              </div>
+                              </a>
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item preview-item">
+                              <div class="preview-thumbnail">
+                              <div class="preview-icon bg-warning">
+                              <i class="">🚕</i>
+                              </div>
+                              </div>
+                              <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
+                              <h6 class="preview-subject font-weight-normal mb-1">Taxi Details</h6>
+                              <p class="text-gray ellipsis mb-0"> Dummy </p>
+                              </div>
+                              </a>
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item preview-item">
+                              <div class="preview-thumbnail">
+                              <div class="preview-icon bg-info">
+                              <i class="">🏨</i>
+                              </div>
+                              </div>
+                              <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
+                              <h6 class="preview-subject font-weight-normal mb-1">Meal And Accomodation</h6>
+                              <p class="text-gray ellipsis mb-0"> Dummy </p>
+                              </div>
+                              </a>
+                              </div>
+                              </div>
+                              </tr>
+                              <tr>
+                              <td>Suraj Yadav</td>
+                              <td> 9650927465 </td>
+                              <td>vinay nagar faridabad</td>
+                              <td> faridabad </td>
+  <td> 
+                                                <i class="mdi mdi-airplane"></i>
+                                                <i class="mdi mdi-silverware-fork-knife"></i>
+                                                <i class="mdi mdi-car"></i>
+                                             </td>                              <td><div class="btn-group">
+                              <button type="button" class="btn btn-gradient-success" data-bs-toggle="dropdown" aria-expanded="false" style="padding: 6px 10px;">
+                              &#8942;
+                              </button>
+                              <div class="dropdown-menu dropdown-menu-end navbar-dropdown preview-list" aria-labelledby="notificationDropdown" data-bs-popper="static">
+                              <a class="dropdown-item preview-item">
+                              <div class="preview-thumbnail">
+                              <div class="preview-icon bg-success">
+                              <i class=""> ✈ </i>
+                              </div>
+                              </div>
+                              <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
+                              <h6 class="preview-subject font-weight-normal mb-1">Upload Flight Tickets</h6>
+                              <p class="text-gray ellipsis mb-0"> Dummy </p>
+                              </div>
+                              </a>
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item preview-item">
+                              <div class="preview-thumbnail">
+                              <div class="preview-icon bg-warning">
+                              <i class="">🚕</i>
+                              </div>
+                              </div>
+                              <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
+                              <h6 class="preview-subject font-weight-normal mb-1">Taxi Details</h6>
+                              <p class="text-gray ellipsis mb-0"> Dummy </p>
+                              </div>
+                              </a>
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item preview-item">
+                              <div class="preview-thumbnail">
+                              <div class="preview-icon bg-info">
+                              <i class="">🏨</i>
+                              </div>
+                              </div>
+                              <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
+                              <h6 class="preview-subject font-weight-normal mb-1">Meal And Accomodation</h6>
+                              <p class="text-gray ellipsis mb-0"> Dummy </p>
+                              </div>
+                              </a>
+                              </div>
+                              </div>
+                              </tr>
+                              <tr>
+                              <td>Suraj Yadav</td>
+                              <td> 9650927465 </td>
+                              <td>vinay nagar faridabad</td>
+                              <td> faridabad </td>
+  <td> 
+                                                <i class="mdi mdi-airplane"></i>
+                                                <i class="mdi mdi-silverware-fork-knife"></i>
+                                                <i class="mdi mdi-car"></i>
+                                             </td>                              <td> <div class="btn-group">
+                              <button type="button" class="btn btn-gradient-success" data-bs-toggle="dropdown" aria-expanded="false" style="padding: 6px 10px;">
+                              &#8942;
+                              </button>
+                              <div class="dropdown-menu dropdown-menu-end navbar-dropdown preview-list" aria-labelledby="notificationDropdown" data-bs-popper="static">
+                              <a class="dropdown-item preview-item">
+                              <div class="preview-thumbnail">
+                              <div class="preview-icon bg-success">
+                              <i class=""> ✈ </i>
+                              </div>
+                              </div>
+                              <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
+                              <h6 class="preview-subject font-weight-normal mb-1">Upload Flight Tickets</h6>
+                              <p class="text-gray ellipsis mb-0"> Dummy </p>
+                              </div>
+                              </a>
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item preview-item">
+                              <div class="preview-thumbnail">
+                              <div class="preview-icon bg-warning">
+                              <i class="">🚕</i>
+                              </div>
+                              </div>
+                              <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
+                              <h6 class="preview-subject font-weight-normal mb-1">Taxi Details</h6>
+                              <p class="text-gray ellipsis mb-0"> Dummy </p>
+                              </div>
+                              </a>
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item preview-item">
+                              <div class="preview-thumbnail">
+                              <div class="preview-icon bg-info">
+                              <i class="">🏨</i>
+                              </div>
+                              </div>
+                              <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
+                              <h6 class="preview-subject font-weight-normal mb-1">Meal And Accomodation</h6>
+                              <p class="text-gray ellipsis mb-0"> Dummy </p>
+                              </div>
+                              </a>
+                              </div>
+                              </div>
+                              </tr>
+                              <tr>
+                              <td>Suraj Yadav</td>
+                              <td> 9650927465 </td>
+                              <td>vinay nagar faridabad</td>
+                              <td> faridabad </td>
+  <td> 
+                                                <i class="mdi mdi-airplane"></i>
+                                                <i class="mdi mdi-silverware-fork-knife"></i>
+                                                <i class="mdi mdi-car"></i>
+                                             </td>                              <td> <div class="btn-group">
+                              <button type="button" class="btn btn-gradient-success" data-bs-toggle="dropdown" aria-expanded="false" style="padding: 6px 10px;">
+                              &#8942;
+                              </button>
+                              <div class="dropdown-menu dropdown-menu-end navbar-dropdown preview-list" aria-labelledby="notificationDropdown" data-bs-popper="static">
+                              <a class="dropdown-item preview-item">
+                              <div class="preview-thumbnail">
+                              <div class="preview-icon bg-success">
+                              <i class=""> ✈ </i>
+                              </div>
+                              </div>
+                              <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
+                              <h6 class="preview-subject font-weight-normal mb-1">Upload Flight Tickets</h6>
+                              <p class="text-gray ellipsis mb-0"> Dummy </p>
+                              </div>
+                              </a>
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item preview-item">
+                              <div class="preview-thumbnail">
+                              <div class="preview-icon bg-warning">
+                              <i class="">🚕</i>
+                              </div>
+                              </div>
+                              <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
+                              <h6 class="preview-subject font-weight-normal mb-1">Taxi Details</h6>
+                              <p class="text-gray ellipsis mb-0"> Dummy </p>
+                              </div>
+                              </a>
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item preview-item">
+                              <div class="preview-thumbnail">
+                              <div class="preview-icon bg-info">
+                              <i class="">🏨</i>
+                              </div>
+                              </div>
+                              <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
+                              <h6 class="preview-subject font-weight-normal mb-1">Meal And Accomodation</h6>
+                              <p class="text-gray ellipsis mb-0"> Dummy </p>
+                              </div>
+                              </a>
+                              </div>
+                              </div>
+                           </div>
+                           </tr>
+                           <tr>
+                           <td>Suraj Yadav</td>
+                           <td> 9650927465 </td>
+                           <td>vinay nagar faridabad</td>
+                           <td> faridabad </td>
+                           <td> 
+                                                <i class="mdi mdi-airplane"></i>
+                                                <i class="mdi mdi-silverware-fork-knife"></i>
+                                                <i class="mdi mdi-car"></i>
+                                             </td>
+                           <td><div class="btn-group">
+                           <button type="button" class="btn btn-gradient-success" data-bs-toggle="dropdown" aria-expanded="false" style="padding: 6px 10px;">
+                           &#8942;
+                           </button>
+                           <div class="dropdown-menu dropdown-menu-end navbar-dropdown preview-list" aria-labelledby="notificationDropdown" data-bs-popper="static">
+                           <a class="dropdown-item preview-item">
+                           <div class="preview-thumbnail">
+                           <div class="preview-icon bg-success">
+                           <i class=""> ✈ </i>
+                           </div>
+                           </div>
+                           <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
+                           <h6 class="preview-subject font-weight-normal mb-1">Upload Flight Tickets</h6>
+                           <p class="text-gray ellipsis mb-0"> Dummy </p>
+                           </div>
+                           </a>
+                           <div class="dropdown-divider"></div>
+                           <a class="dropdown-item preview-item">
+                           <div class="preview-thumbnail">
+                           <div class="preview-icon bg-warning">
+                           <i class="">🚕</i>
+                           </div>
+                           </div>
+                           <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
+                           <h6 class="preview-subject font-weight-normal mb-1">Taxi Details</h6>
+                           <p class="text-gray ellipsis mb-0"> Dummy </p>
+                           </div>
+                           </a>
+                           <div class="dropdown-divider"></div>
+                           <a class="dropdown-item preview-item">
+                           <div class="preview-thumbnail">
+                           <div class="preview-icon bg-info">
+                           <i class="">🏨</i>
+                           </div>
+                           </div>
+                           <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
+                           <h6 class="preview-subject font-weight-normal mb-1">Meal And Accomodation</h6>
+                           <p class="text-gray ellipsis mb-0"> Dummy </p>
+                           </div>
+                           </a>
+                           </div>
+                           </div>
+                        </div>
+                        </tr>
+                        <tr>
+                        <td>Suraj Yadav</td>
+                        <td> 9650927465 </td>
+                        <td>vinay nagar faridabad</td>
+                        <td> faridabad </td>
+                        <td> 
+                                                <i class="mdi mdi-airplane"></i>
+                                                <i class="mdi mdi-silverware-fork-knife"></i>
+                                                <i class="mdi mdi-car"></i>
+                                             </td>
+                        <td> <div class="btn-group">
+                        <button type="button" class="btn btn-gradient-success" data-bs-toggle="dropdown" aria-expanded="false" style="padding: 6px 10px;">
+                        &#8942;
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-end navbar-dropdown preview-list" aria-labelledby="notificationDropdown" data-bs-popper="static">
+                        <a class="dropdown-item preview-item">
+                        <div class="preview-thumbnail">
+                        <div class="preview-icon bg-success">
+                        <i class=""> ✈ </i>
+                        </div>
+                        </div>
+                        <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
+                        <h6 class="preview-subject font-weight-normal mb-1">Upload Flight Tickets</h6>
+                        <p class="text-gray ellipsis mb-0"> Dummy </p>
+                        </div>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item preview-item">
+                        <div class="preview-thumbnail">
+                        <div class="preview-icon bg-warning">
+                        <i class="">🚕</i>
+                        </div>
+                        </div>
+                        <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
+                        <h6 class="preview-subject font-weight-normal mb-1">Taxi Details</h6>
+                        <p class="text-gray ellipsis mb-0"> Dummy </p>
+                        </div>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item preview-item">
+                        <div class="preview-thumbnail">
+                        <div class="preview-icon bg-info">
+                        <i class="">🏨</i>
+                        </div>
+                        </div>
+                        <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
+                        <h6 class="preview-subject font-weight-normal mb-1">Meal And Accomodation</h6>
+                        <p class="text-gray ellipsis mb-0"> Dummy </p>
+                        </div>
+                        </a>
+                        </div>
+                        </div>
+                        </tr>
+                        <tr>
+                        <td>Suraj Yadav</td>
+                        <td> 9650927465 </td>
+                        <td>vinay nagar faridabad</td>
+                        <td> faridabad </td>
+                        <td> 
+                                                <i class="mdi mdi-airplane"></i>
+                                                <i class="mdi mdi-silverware-fork-knife"></i>
+                                                <i class="mdi mdi-car"></i>
+                                             </td>
+                        <td><div class="btn-group">
+                        <button type="button" class="btn btn-gradient-success" data-bs-toggle="dropdown" aria-expanded="false" style="padding: 6px 10px;">
+                        &#8942;
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-end navbar-dropdown preview-list" aria-labelledby="notificationDropdown" data-bs-popper="static">
+                        <a class="dropdown-item preview-item">
+                        <div class="preview-thumbnail">
+                        <div class="preview-icon bg-success">
+                        <i class=""> ✈ </i>
+                        </div>
+                        </div>
+                        <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
+                        <h6 class="preview-subject font-weight-normal mb-1">Upload Flight Tickets</h6>
+                        <p class="text-gray ellipsis mb-0"> Dummy </p>
+                        </div>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item preview-item">
+                        <div class="preview-thumbnail">
+                        <div class="preview-icon bg-warning">
+                        <i class="">🚕</i>
+                        </div>
+                        </div>
+                        <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
+                        <h6 class="preview-subject font-weight-normal mb-1">Taxi Details</h6>
+                        <p class="text-gray ellipsis mb-0"> Dummy </p>
+                        </div>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item preview-item">
+                        <div class="preview-thumbnail">
+                        <div class="preview-icon bg-info">
+                        <i class="">🏨</i>
+                        </div>
+                        </div>
+                        <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
+                        <h6 class="preview-subject font-weight-normal mb-1">Meal And Accomodation</h6>
+                        <p class="text-gray ellipsis mb-0"> Dummy </p>
+                        </div>
+                        </a>
+                        </div>
+                        </div>
+                        </tr>
+                        <tr>
+                        <td>Suraj Yadav</td>
+                        <td> 9650927465 </td>
+                        <td>vinay nagar faridabad</td>
+                        <td> faridabad </td>
+                        <td> 
+                                                <i class="mdi mdi-airplane"></i>
+                                                <i class="mdi mdi-silverware-fork-knife"></i>
+                                                <i class="mdi mdi-car"></i>
+                                             </td>
+                        <td><div class="btn-group">
+                        <button type="button" class="btn btn-gradient-success" data-bs-toggle="dropdown" aria-expanded="false" style="padding: 6px 10px;">
+                        &#8942;
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-end navbar-dropdown preview-list" aria-labelledby="notificationDropdown" data-bs-popper="static">
+                        <a class="dropdown-item preview-item">
+                        <div class="preview-thumbnail">
+                        <div class="preview-icon bg-success">
+                        <i class=""> ✈ </i>
+                        </div>
+                        </div>
+                        <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
+                        <h6 class="preview-subject font-weight-normal mb-1">Upload Flight Tickets</h6>
+                        <p class="text-gray ellipsis mb-0"> Dummy </p>
+                        </div>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item preview-item">
+                        <div class="preview-thumbnail">
+                        <div class="preview-icon bg-warning">
+                        <i class="">🚕</i>
+                        </div>
+                        </div>
+                        <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
+                        <h6 class="preview-subject font-weight-normal mb-1">Taxi Details</h6>
+                        <p class="text-gray ellipsis mb-0"> Dummy </p>
+                        </div>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item preview-item">
+                        <div class="preview-thumbnail">
+                        <div class="preview-icon bg-info">
+                        <i class="">🏨</i>
+                        </div>
+                        </div>
+                        <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
+                        <h6 class="preview-subject font-weight-normal mb-1">Meal And Accomodation</h6>
+                        <p class="text-gray ellipsis mb-0"> Dummy </p>
+                        </div>
+                        </a>
+                        </div>
+                        </div>
+                        </tr>
+                        <tr>
+                        <td>Suraj Yadav</td>
+                        <td> 9650927465 </td>
+                        <td>vinay nagar faridabad</td>
+                        <td> faridabad </td>
+                        <td> 
+                                                <i class="mdi mdi-airplane"></i>
+                                                <i class="mdi mdi-silverware-fork-knife"></i>
+                                                <i class="mdi mdi-car"></i>
+                                             </td>
+                        <td>
+                        <button type="button" class="btn btn-gradient-success" data-bs-toggle="dropdown" aria-expanded="false" style="padding: 6px 10px;">
+                        &#8942;
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-end navbar-dropdown preview-list" aria-labelledby="notificationDropdown" data-bs-popper="static">
+                        <a class="dropdown-item preview-item">
+                        <div class="preview-thumbnail">
+                        <div class="preview-icon bg-success">
+                        <i class=""> ✈ </i>
+                        </div>
+                        </div>
+                        <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
+                        <h6 class="preview-subject font-weight-normal mb-1">Upload Flight Tickets</h6>
+                        <p class="text-gray ellipsis mb-0"> Dummy </p>
+                        </div>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item preview-item">
+                        <div class="preview-thumbnail">
+                        <div class="preview-icon bg-warning">
+                        <i class="">🚕</i>
+                        </div>
+                        </div>
+                        <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
+                        <h6 class="preview-subject font-weight-normal mb-1">Taxi Details</h6>
+                        <p class="text-gray ellipsis mb-0"> Dummy </p>
+                        </div>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item preview-item">
+                        <div class="preview-thumbnail">
+                        <div class="preview-icon bg-info">
+                        <i class="">🏨</i>
+                        </div>
+                        </div>
+                        <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
+                        <h6 class="preview-subject font-weight-normal mb-1">Meal And Accomodation</h6>
+                        <p class="text-gray ellipsis mb-0"> Dummy </p>
+                        </div>
+                        </a>
+                        </div>
+                     </div>
+                     </td>
+                     <td> 
+                  </tr>
+                  </tbody>
+                  </table>
+               </div>
+            </div>
+            <!-- Modal add contact Model -->
+            <div class="modal fade" id="addContactModal" tabindex="-1" aria-labelledby="addContactModalLabel" aria-hidden="true">
+               <div class="modal-dialog modal-md">
+                  <div class="modal-content">
+                     <div class="modal-header">
+                        <h4 class="modal-title" id="addContactModalLabel">Add New Contact</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                     </div>
+                     <div class="modal-body">
+                        <!-- Tabs for Single and CSV -->
+                        <ul class="nav nav-tabs" id="contactTab" role="tablist">
+                           <li class="nav-item" role="presentation">
+                              <button class="nav-link active" id="single-contact-tab" data-bs-toggle="tab" data-bs-target="#single-contact" type="button" role="tab">Single Contact</button>
+                           </li>
+                           <li class="nav-item" role="presentation">
+                              <button class="nav-link" id="csv-contact-tab" data-bs-toggle="tab" data-bs-target="#csv-contact" type="button" role="tab">Upload CSV</button>
+                           </li>
+                        </ul>
+                        <div class="tab-content pt-3" id="contactTabContent">
+                           <!-- Single Contact Form -->
+                           <div class="tab-pane fade show active" id="single-contact" role="tabpanel">
+                              <form>
+                                 <div class="row mb-3">
+                                    <div class="col-md-6">
+                                       <label for="contactName" class="form-label">Full Name</label>
+                                       <input type="text" class="form-control" id="contactName" placeholder="Enter Full Name">
+                                    </div>
+                                    <div class="col-md-6">
+                                       <label for="contactEmail" class="form-label">Email</label>
+                                       <input type="email" class="form-control" id="contactEmail" placeholder="Enter Email">
+                                    </div>
+                                 </div>
+                                 <div class="row mb-3">
+                                    <div class="col-md-6">
+                                       <label for="contactPhone" class="form-label">Phone Number</label>
+                                       <input type="text" class="form-control" id="contactPhone" placeholder="Enter Phone Number">
+                                    </div>
+                                    <div class="col-md-6">
+                                      <label for="contactPhone" class="form-label">Phone Number</label>
+                                      <input type="text" class="form-control" id="contactPhone" placeholder="Enter Phone Number">
+                                   </div>
+                                    
+                                 </div>
+                                 <div class="row mb-3">
+                                  <div class="col-md-6">
+                                     <label for="contactPhone" class="form-label">City</label>
+                                     <input type="text" class="form-control" id="contactPhone" placeholder="Enter Phone Number">
+                                  </div>
+                                  
+                               </div>
+                                 <button type="submit" class="btn btn-success">Save Contact</button>
+                              </form>
+                           </div>
+                           <!-- CSV Upload Form -->
+                           <div class="tab-pane fade" id="csv-contact" role="tabpanel">
+                              <form enctype="multipart/form-data">
+                                 <div class="mb-3">
+                                    <label for="contactCsvFile" class="form-label">Upload CSV File</label>
+                                    <input class="form-control" type="file" id="contactCsvFile" accept=".csv">
+                                    <small class="text-muted">Format: Name, Email, Phone, Status</small>
+                                 </div>
+                                 <button type="submit" class="btn btn-primary">Upload CSV</button>
+                              </form>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+             
+
+
+<!-- flight ticket Model -->
+<div class="modal fade" id="uploadFlightTicketModal" tabindex="-1" aria-labelledby="uploadFlightTicketModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      
+      <div class="modal-header">
+        <h5 class="modal-title" id="uploadFlightTicketModalLabel">
+          <i class="mdi mdi-airplane"></i> Upload Flight Tickets
+        </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      
+      <form id="flightTicketForm" enctype="multipart/form-data">
+        <div class="modal-body">
+          
+          <div class="mb-3">
+            <label for="ticketTitle" class="form-label">PNR Number</label>
+            <input type="text" class="form-control" id="ticketTitle" name="ticketTitle" placeholder="Enter ticket title" required>
+          </div>
+          
+          <div class="mb-3">
+            <label for="ticketFile" class="form-label">Choose Ticket File (PDF, JPG, PNG)</label>
+            <input class="form-control" type="file" id="ticketFile" name="ticketFile" accept=".pdf,.jpg,.jpeg,.png" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="passengerName" class="form-label">Passenger Name</label>
+            <input type="text" class="form-control" id="passengerName" name="passengerName" placeholder="Enter passenger name">
+          </div>
+
+        </div>
+        
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-success">Upload Ticket</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!--Taxi Modal -->
+<div class="modal fade" id="taxiDetailsModal" tabindex="-1" aria-labelledby="taxiDetailsModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-md">
+    <div class="modal-content">
+      
+      <div class="modal-header">
+        <h5 class="modal-title" id="taxiDetailsModalLabel">
+          <i class="mdi mdi-taxi"></i> Taxi Details
+        </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      
+      <form id="taxiDetailsForm">
+        <div class="modal-body">
+          <div class="row">
+
+            <div class="col-md-6 mb-3">
+              <label for="pickupLocation" class="form-label">Pickup Location</label>
+              <input type="text" class="form-control" id="pickupLocation" name="pickupLocation" placeholder="Enter pickup point" required>
+            </div>
+
+            <div class="col-md-6 mb-3">
+              <label for="dropLocation" class="form-label">Drop Location</label>
+              <input type="text" class="form-control" id="dropLocation" name="dropLocation" placeholder="Enter drop point" required>
+            </div>
+
+            <div class="col-md-6 mb-3">
+              <label for="pickupDate" class="form-label">Pickup Date & Time</label>
+              <input type="datetime-local" class="form-control" id="pickupDate" name="pickupDate" required>
+            </div>
+
+            <div class="col-md-6 mb-3">
+              <label for="taxiType" class="form-label">Taxi Type</label>
+              <select class="form-select" id="taxiType" name="taxiType" required>
+                <option value="">Select Type</option>
+                <option value="Sedan">Sedan</option>
+                <option value="SUV">SUV</option>
+                <option value="Van">Van</option>
+              </select>
+            </div>
+
+            <div class="col-md-6 mb-3">
+              <label for="driverName" class="form-label">Driver Name</label>
+              <input type="text" class="form-control" id="driverName" name="driverName" placeholder="Enter driver name">
+            </div>
+
+            <div class="col-md-6 mb-3">
+              <label for="driverPhone" class="form-label">Driver Contact</label>
+              <input type="tel" class="form-control" id="driverPhone" name="driverPhone" placeholder="Enter phone number">
+            </div>
+
+            <div class="col-md-6 mb-3">
+              <label for="vehicleNumber" class="form-label">Vehicle Number</label>
+              <input type="text" class="form-control" id="vehicleNumber" name="vehicleNumber" placeholder="Enter vehicle number">
+            </div>
+
+            <div class="col-md-6 mb-3">
+              <label for="remarks" class="form-label">Remarks</label>
+              <textarea class="form-control" id="remarks" name="remarks" rows="2" placeholder="Additional notes"></textarea>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+          <button type="submit" class="btn btn-success">Save Taxi Details</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<!-- Meal & Accommodation Modal -->
+<div class="modal fade" id="mealAccommodationModal" tabindex="-1" aria-labelledby="mealAccommodationModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title" id="mealAccommodationModalLabel">
+          <i class="mdi mdi-silverware-fork-knife"></i> Meal & Accommodation Details
+        </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <form id="mealAccommodationForm">
+        <div class="modal-body">
+          <div class="row">
+
+            <!-- Accommodation Details -->
+            <div class="col-12 mb-2">
+              <h6 class="text-primary"><i class="mdi mdi-hotel"></i> Accommodation Info</h6>
+              <hr>
+            </div>
+
+            <div class="col-md-6 mb-3">
+              <label for="hotelName" class="form-label">Hotel Name</label>
+              <input type="text" class="form-control" id="hotelName" name="hotelName" placeholder="Enter hotel name" required>
+            </div>
+
+            <div class="col-md-6 mb-3">
+              <label for="nightsStay" class="form-label">No. of Nights</label>
+              <input type="number" class="form-control" id="nightsStay" name="nightsStay" placeholder="e.g. 3" required>
+            </div>
+
+            <div class="col-md-6 mb-3">
+              <label for="roomType" class="form-label">Room Type</label>
+              <select class="form-select" id="roomType" name="roomType">
+                <option value="">Select</option>
+                <option value="Single">Single</option>
+                <option value="Double">Double</option>
+                <option value="Suite">Suite</option>
+              </select>
+            </div>
+
+            <div class="col-md-6 mb-3">
+              <label for="checkInDate" class="form-label">Check-in Date</label>
+              <input type="date" class="form-control" id="checkInDate" name="checkInDate">
+            </div>
+
+            <!-- Meal Details -->
+            <div class="col-12 mt-4 mb-2">
+              <h6 class="text-primary"><i class="mdi mdi-silverware-variant"></i> Meal Info (Day Wise)</h6>
+              <hr>
+            </div>
+            
+            <!-- Nav Tabs -->
+            <ul class="nav nav-tabs ms-3" id="mealTabs" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="day1-tab" data-bs-toggle="tab" data-bs-target="#day1" type="button" role="tab">Day 1</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="day2-tab" data-bs-toggle="tab" data-bs-target="#day2" type="button" role="tab">Day 2</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="day3-tab" data-bs-toggle="tab" data-bs-target="#day3" type="button" role="tab">Day 3</button>
+              </li>
+            </ul>
+            
+            <!-- Tab Content -->
+            <div class="tab-content pt-3" id="mealTabsContent">
+              <!-- Day 1 -->
+              <div class="tab-pane fade show active" id="day1" role="tabpanel">
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label class="form-label">Meal Type</label>
+                    <select class="form-select" name="mealType_day1">
+                      <option value="">Select</option>
+                      <option value="Breakfast">Breakfast</option>
+                      <option value="Lunch">Lunch</option>
+                      <option value="Dinner">Dinner</option>
+                      <option value="All Meals">All Meals</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label class="form-label">Meal Preference</label>
+                    <select class="form-select" name="mealPref_day1">
+                      <option value="">Select</option>
+                      <option value="Veg">Veg</option>
+                      <option value="Non-Veg">Non-Veg</option>
+                      <option value="Jain">Jain</option>
+                    </select>
+                  </div>
+                  <div class="col-12 mb-3">
+                    <label class="form-label">Meal Notes</label>
+                    <textarea class="form-control" name="mealNote_day1" rows="2" placeholder="Special instructions..."></textarea>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- Day 2 -->
+              <div class="tab-pane fade" id="day2" role="tabpanel">
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label class="form-label">Meal Type</label>
+                    <select class="form-select" name="mealType_day2">
+                      <option value="">Select</option>
+                      <option value="Breakfast">Breakfast</option>
+                      <option value="Lunch">Lunch</option>
+                      <option value="Dinner">Dinner</option>
+                      <option value="All Meals">All Meals</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label class="form-label">Meal Preference</label>
+                    <select class="form-select" name="mealPref_day2">
+                      <option value="">Select</option>
+                      <option value="Veg">Veg</option>
+                      <option value="Non-Veg">Non-Veg</option>
+                      <option value="Jain">Jain</option>
+                    </select>
+                  </div>
+                  <div class="col-12 mb-3">
+                    <label class="form-label">Meal Notes</label>
+                    <textarea class="form-control" name="mealNote_day2" rows="2" placeholder="Special instructions..."></textarea>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- Day 3 -->
+              <div class="tab-pane fade" id="day3" role="tabpanel">
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label class="form-label">Meal Type</label>
+                    <select class="form-select" name="mealType_day3">
+                      <option value="">Select</option>
+                      <option value="Breakfast">Breakfast</option>
+                      <option value="Lunch">Lunch</option>
+                      <option value="Dinner">Dinner</option>
+                      <option value="All Meals">All Meals</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label class="form-label">Meal Preference</label>
+                    <select class="form-select" name="mealPref_day3">
+                      <option value="">Select</option>
+                      <option value="Veg">Veg</option>
+                      <option value="Non-Veg">Non-Veg</option>
+                      <option value="Jain">Jain</option>
+                    </select>
+                  </div>
+                  <div class="col-12 mb-3">
+                    <label class="form-label">Meal Notes</label>
+                    <textarea class="form-control" name="mealNote_day3" rows="2" placeholder="Special instructions..."></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+          <button type="submit" class="btn btn-success">Save Details</button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+         </div>
+      </div>
+      </div>
+      </div>
+      <!-- Bootstrap JS -->
+      </div>
+      <!-- content-wrapper ends -->
+      <!-- partial -->
+      </div>
+      <!-- main-panel ends -->
+      </div>
+      </div>
+      <!-- page-body-wrapper ends -->
+      </div>
+      <!-- container-scroller -->
+      <!-- plugins:js -->
+      <script src="../../assets/vendors/js/vendor.bundle.base.js"></script>
+      <script src="../../assets/jquery.avgrund/jquery.avgrund.min.js"></script>
+      <!-- endinject -->
+      <!-- Plugin js for this page -->
+      <!-- End plugin js for this page -->
+      <!-- inject:js -->
+      <script src="../../assets/js/off-canvas.js"></script>
+      <script src="../../assets/js/misc.js"></script>
+      <script src="../../assets/js/settings.js"></script>
+      <script src="../../assets/js/todolist.js"></script>
+      <script src="../../assets/js/jquery.cookie.js"></script>
+      <script>
+         (function ($) {
+             'use strict';
+             $(function () {
+                 $('#show').avgrund({
+                 height: 500,
+                 holderClass: 'custom',
+                 showClose: true,
+                 showCloseText: 'x',
+                 onBlurContainer: '.container-scroller',
+                 template: '<p>So implement your design and place content here! If you want to close modal, please hit "Esc", click somewhere on the screen or use special button.</p>' +
+                     '<div class="d-grid gap-2">' +
+                     '<a href="http://twitter.com/voronianski" target="_blank" class="twitter btn btn-twitter btn-block">Twitter</a>' +
+                     '<a href="http://dribbble.com/voronianski" target="_blank" class="dribble btn btn-dribbble btn-block">Dribbble</a>' +
+                     '</div>' +
+                     '<div class="text-center mt-4">' +
+                     '<a href="#" target="_blank" class="btn btn-success me-2">Great!</a>' +
+                     '<a href="#" target="_blank" class="btn btn-light">Cancel</a>' +
+                     '</div>'
+                 });
+             })
+             })(jQuery);
+      </script>
+      <!-- endinject -->
+      <!-- Custom js for this page -->
+      <!-- End custom js for this page -->
+   </body>
+</html>
